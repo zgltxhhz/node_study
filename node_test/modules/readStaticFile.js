@@ -1,4 +1,5 @@
 'use strict'
+
 // 读取静态文件模块
 
 let fs = require('fs')
