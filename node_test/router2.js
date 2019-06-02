@@ -14,7 +14,7 @@ http.createServer(function(req, res) {
     let queryObj = urlObj.query;
     console.log(JSON.stringify(queryObj))
     
-    // console.log(urlPathname)
+    console.log(urlPathname)
     // 路由
     switch (urlPathname) {
         // 响应 login 页面
@@ -22,7 +22,7 @@ http.createServer(function(req, res) {
             // console.log(111)
         case "":
             // console.log(222)
-            readStaticFile(res, "./bulid/view/login.html");
+            readStaticFile(res, "bulid/view/login.html");
             break;
         // 响应查询对象的 JSON 形式到浏览器 
         case "/login":
@@ -35,5 +35,5 @@ http.createServer(function(req, res) {
         default:
             readStaticFile(res, "./404.html");
     }
-}).listen(8080)
+}).listen(8888)
 console.log('服务器开启成功');
